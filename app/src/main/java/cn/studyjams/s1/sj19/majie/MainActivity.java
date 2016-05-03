@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void chooseDiscipline(View view) {
         //String message;
-        //message = "        选择专业时，应从自己的未来打算开始，是准备就业，还是准备从事研究工作。然后根据不同的方向，结合自己的兴趣选择。";
+        //message = "          选择专业时，应从自己的未来打算开始，是准备就业，还是准备从事研究工作。然后根据不同的方向，结合自己的兴趣选择。";
         //TextView textView = (TextView)findViewById(R.id.explain_textview);
         //textView.setText(message);
         Intent intent = new Intent(MainActivity.this, DisciplineActivity.class);
