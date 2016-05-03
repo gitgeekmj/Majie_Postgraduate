@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/parentUse"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        style="@style/parentUse"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="cn.studyjams.s1.sj19.majie.DisciplineActivity">
+
+        <LinearLayout
+            style="@style/parentUse"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/usuallyUse"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="24dp"
+                android:text="@string/textview_feature_expectation"
+                android:textSize="24sp" />
+
+            <Button
+                style="@style/usuallyUse"
+                android:layout_marginLeft="24dp"
+                android:onClick="notThinkClearly"
+                android:text="@string/button_howToChoose" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radiobutton_research"
+                style="@style/radioButtonUse"
+                android:onClick="chooseResearch"
+                android:text="@string/RadioButton_research" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_employ"
+                style="@style/radioButtonUse"
+                android:onClick="chooseEmploy"
+                android:text="@string/RadioButton_employment" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/interests"
+                style="@style/discipline_textViewUse"
+                android:layout_gravity="center_vertical"
+                android:text="@string/text_employInterests" />
+
+            <Spinner
+                android:id="@+id/employ_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:entries="@array/initialization"></Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/discipline_text"
+                style="@style/discipline_textViewUse"
+                android:layout_gravity="center_vertical"
+                android:text="@string/text_choose_displine" />
+
+            <Spinner
+                android:id="@+id/discipline_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:entries="@array/initialization"></Spinner>
+        </LinearLayout>
+
+        <TextView
+            style="@style/discipline_textViewUse"
+            android:layout_marginTop="24dp"
+            android:text="@string/text_displineCharacters" />
+
+        <TextView
+            android:id="@+id/text_details"
+            style="@style/usuallyUse"
+            android:layout_marginTop="18dp"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/findSchool_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_findSchool"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+</ScrollView>

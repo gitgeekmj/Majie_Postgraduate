@@ -1,0 +1,63 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FF9800</item>
+        <item name="colorPrimaryDark">#FF9800</item>
+        <item name="colorButtonNormal">#FF9800</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--常用风格  高度与宽度均适配文字 -->
+    <style name="usuallyUse">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--父布局铺满 -->
+    <style name="parentUse">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!--标题风格 -->
+    <style name="titleUse">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!--按钮风格 -->
+    <style name="buttonUse">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginLeft">28dp</item>
+        <item name="android:layout_marginRight">28dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <!--单选框按钮风格 -->
+    <style name="radioButtonUse">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:paddingLeft">18dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--Discipline文本风格 -->
+    <style name="discipline_textViewUse">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">28dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+</resources>

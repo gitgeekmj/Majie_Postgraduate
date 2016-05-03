@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">计算机专业考研帮</string>
+    <string name="textView_title">计算机专业考研帮</string>
+    <string name="textView_explain">\t\t\t这款APP专为想要报考计算机专业的同学制作，帮助大家从以下四个方面进行备考，希望对正在使用的您有帮助。</string>
+    <string name="button_choose_disipline">专业挑选</string>
+    <string name="button_timePlanning">时间规划</string>
+    <string name="button_book_recommend">书籍推荐</string>
+    <string name="button_choose_target">确定目标</string>
+    <string name="button_life_tips">生活贴士</string>
+    <string name="button_encouragement">备考技巧</string>
+    <string name="textview_feature_expectation">请选择未来的期望</string>
+    <string name="button_howToChoose">没想好</string>
+    <string name="RadioButton_research">科研</string>
+    <string name="RadioButton_employment">就业</string>
+    <string name="text_researchInterests">研究方向</string>
+    <string name="text_employInterests">就业方向</string>
+    <string name="text_choose_displine">专业选择</string>
+    <string name="text_displineCharacters">专业特点</string>
+    <string name="button_findSchool">查看该专业对应院校</string>
+    <string name="textview_findSchool_title">专业还未确定？</string>
+    <string name="textview_findSchool_chooseTarget">去选专业</string>
+    <string name="textview_findSchool_schoolRank">所选专业对应学校排行</string>
+    <string name="textview_findSchool_grade">往年录取平均分数</string>
+    <string name="textview_findSchool_publicPraise">专业口碑:</string>
+
+
+</resources>

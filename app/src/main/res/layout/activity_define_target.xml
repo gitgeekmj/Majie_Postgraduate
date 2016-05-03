@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/parentUse"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        style="@style/parentUse"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="cn.studyjams.s1.sj19.majie.DefineTarget">
+
+        <LinearLayout
+            style="@style/usuallyUse"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/usuallyUse"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="24dp"
+                android:text="@string/textview_findSchool_title"
+                android:textSize="24sp" />
+
+            <Button
+                style="@style/usuallyUse"
+                android:layout_marginLeft="24dp"
+                android:onClick="toFindDiscipline"
+                android:text="@string/textview_findSchool_chooseTarget" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/usuallyUse"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp"
+            android:text="@string/textview_findSchool_schoolRank"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            style="@style/usuallyUse"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/search_et_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:drawablePadding="5dp"
+                android:ems="12"
+                android:hint="请输入关键字"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/search_iv_delete"
+                style="@style/usuallyUse"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/search" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/search_lv_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone">
+        </ListView>
+
+    </LinearLayout>
+</ScrollView>
