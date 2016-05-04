@@ -18,6 +18,14 @@
             android:layout_marginBottom="16dp"
             android:text="@string/textView_title" />
 
+        <ImageButton
+            android:id="@+id/encourageMusic"
+            style="@style/usuallyUse"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:background="@drawable/music"/>
+
         <TextView
             android:id="@+id/explain_textview"
             android:layout_width="wrap_content"
