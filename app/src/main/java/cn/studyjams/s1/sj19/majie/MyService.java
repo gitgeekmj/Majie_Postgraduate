@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.Environment;
 import android.os.IBinder;
+import android.util.Log;
 
 import java.io.File;
 
@@ -18,8 +19,11 @@ public class MyService extends Service {
             try {
                 File file = new File(Environment.getExternalStorageDirectory(), "music.mp3");
                 mediaPlayer.setDataSource(file.getPath());
+                Log.e("bind","this2");
                 mediaPlayer.prepare();
+                Log.e("bind","this3");
             } catch (Exception e) {
+                Log.e("bind","this5");
                 e.printStackTrace();
             }
         }
@@ -39,8 +43,10 @@ public class MyService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        Log.e("bind","this1");
         musicBinder.initMediaPlayer();
         if (!mediaPlayer.isPlaying()) {
+            Log.e("bind","this4");
             mediaPlayer.start();
         }
     }

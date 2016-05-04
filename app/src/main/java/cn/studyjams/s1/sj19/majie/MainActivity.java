@@ -35,22 +35,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         chooseTarget = (Button) findViewById(R.id.chooseTarget_button);
         lifeTips = (Button) findViewById(R.id.lifeTips_buton);
         encouragement = (Button) findViewById(R.id.encouragement_button);
-        playMusic.setOnClickListener(this);
         chooseDiscipline.setOnClickListener(this);
         timePlanning.setOnClickListener(this);
         bookRecommend.setOnClickListener(this);
         chooseTarget.setOnClickListener(this);
         lifeTips.setOnClickListener(this);
         encouragement.setOnClickListener(this);
+        playMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_music = new Intent(MainActivity.this, EncouageMusic.class);
+                startActivity(intent_music);
+            }
+        });
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.encourageMusic:
-                Intent intent_music = new Intent(MainActivity.this,EncouageMusic.class);
-                startActivity(intent_music);
-                break;
             case R.id.chooseDiscipline_button:
                 Intent intent_chooseDiscipline = new Intent(MainActivity.this, DisciplineActivity.class);
                 startActivity(intent_chooseDiscipline);

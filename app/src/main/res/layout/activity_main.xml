@@ -24,7 +24,8 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:scaleType="centerCrop"
-            android:background="@drawable/music"/>
+            android:src="@drawable/music"
+            android:background="#0000"/>
 
         <TextView
             android:id="@+id/explain_textview"
