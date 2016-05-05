@@ -1,6 +1,8 @@
 package cn.studyjams.s1.sj19.majie;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dbHelper = new MyDatabaseHelper(this, "Study.db", null, 1);
         //创建数据库
         dbHelper.getWritableDatabase();
+        //数据库添加数据
+        addDatabase();
         //播放背景音乐按钮
         playMusic = (ImageButton) findViewById(R.id.encourageMusic);
         //专业挑选按钮
@@ -61,8 +65,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
+    public void addDatabase() {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        //开始组装第一条数据
+        values.put("direction", "b");
+        values.put("major1", "1");
+        values.put("major2", "2");
+        values.put("major3", "3");
+        //开始插入第一条数据
+        db.insert("Research", null, values);
+        values.clear();
+        //开始组装第二条数据
+        values.put("direction", "c");
+        values.put("major1", "4");
+        values.put("major2", "5");
+        values.put("major3", "6");
+        //开始插入第二条数据
+        db.insert("Research", null, values);
+        values.clear();
+        //开始组装第三条数据
+        values.put("direction", "d");
+        values.put("major1", "7");
+        values.put("major2", "8");
+        values.put("major3", "9");
+        //开始插入第三条数据
+        db.insert("Research", null, values);
+    }
+
     /**
-     *
      * @param view 各个按钮的点击事件
      */
     @Override
