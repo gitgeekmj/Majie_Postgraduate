@@ -26,21 +26,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+        //建立数据库对象 版本1
         dbHelper = new MyDatabaseHelper(this, "Study.db", null, 1);
+        //创建数据库
         dbHelper.getWritableDatabase();
+        //播放背景音乐按钮
         playMusic = (ImageButton) findViewById(R.id.encourageMusic);
+        //专业挑选按钮
         chooseDiscipline = (Button) findViewById(R.id.chooseDiscipline_button);
+        //时间规划按钮
         timePlanning = (Button) findViewById(R.id.timePlanning_button);
+        //书籍推荐按钮
         bookRecommend = (Button) findViewById(R.id.bookRecommend_button);
+        //目标选择按钮
         chooseTarget = (Button) findViewById(R.id.chooseTarget_button);
+        //生活贴士按钮
         lifeTips = (Button) findViewById(R.id.lifeTips_buton);
+        //备考技巧按钮
         encouragement = (Button) findViewById(R.id.encouragement_button);
+        //以上按钮的监听器
         chooseDiscipline.setOnClickListener(this);
         timePlanning.setOnClickListener(this);
         bookRecommend.setOnClickListener(this);
         chooseTarget.setOnClickListener(this);
         lifeTips.setOnClickListener(this);
         encouragement.setOnClickListener(this);
+        //跳转音乐播放界面  使用 intent
         playMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +61,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
+    /**
+     *
+     * @param view 各个按钮的点击事件
+     */
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
