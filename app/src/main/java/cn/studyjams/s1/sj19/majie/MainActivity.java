@@ -91,6 +91,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         values.put("major3", "9");
         //开始插入第三条数据
         db.insert("Research", null, values);
+        values.clear();
+        values.put("major", "1");
+        values.put("trait", "a");
+        db.insert("Major", null, values);
+        values.clear();
+        values.put("major", "2");
+        values.put("trait", "b");
+        db.insert("Major", null, values);
+        values.clear();
+        values.put("major", "3");
+        values.put("trait", "c");
+        db.insert("Major", null, values);
+        values.clear();
+        values.put("major", "4");
+        values.put("trait", "e");
+        db.insert("Major", null, values);
+        values.clear();
+        values.put("major", "5");
+        values.put("trait", "f");
+        db.insert("Major", null, values);
+        values.clear();
+        values.put("major", "6");
+        values.put("trait", "g");
+        db.insert("Major", null, values);
+        values.clear();
+        values.put("major", "7");
+        values.put("trait", "h");
+        db.insert("Major", null, values);
+        values.clear();
+        values.put("major", "8");
+        values.put("trait", "i");
+        db.insert("Major", null, values);
+        values.clear();
+        values.put("major", "9");
+        values.put("trait", "j");
+        db.insert("Major", null, values);
     }
 
     /**

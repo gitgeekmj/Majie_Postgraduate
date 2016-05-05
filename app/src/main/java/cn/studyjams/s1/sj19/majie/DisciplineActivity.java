@@ -16,7 +16,8 @@ import android.widget.TextView;
 
 public class DisciplineActivity extends AppCompatActivity {
     private MyDatabaseHelper dbHelper;
-
+    public static String Direction = "";
+    public static String Major = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,37 +33,57 @@ public class DisciplineActivity extends AppCompatActivity {
         /**
          * 下方为spinner控件与数据库交互
          */
-        //spinner控件
+        //spinner控件 研究方向
         Spinner spinner_researchDirection = (Spinner) findViewById(R.id.employ_spinner);
-
+        //定义数据库对象
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         //返回数据库行数
         String dataName = "Research";
         //定义数据源变量
         String[] researchDirection = new String[queryCount(dataName)];
         //查询表中的数据并建立数据源
-        Cursor cursor = db.query("Research", null, null, null, null, null, null);
-        if (cursor.moveToFirst()) {
+        Cursor cursor_direction = db.query("Research", null, null, null, null, null, null);
+        if (cursor_direction.moveToFirst()) {
             int index = 0;
             do {
 
-                researchDirection[index] = cursor.getString(cursor.getColumnIndex("direction"));
+                researchDirection[index] = cursor_direction.getString(cursor_direction.getColumnIndex("direction"));
                 Log.e("tag1", researchDirection[index]);
                 index++;
-            } while (cursor.moveToNext());
+            } while (cursor_direction.moveToNext());
         }
         // 建立Adapter并且绑定数据源
         ArrayAdapter<String> adapter_one = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, researchDirection);
         adapter_one.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //绑定 Adapter到控件
         spinner_researchDirection.setAdapter(adapter_one);
+
         spinner_researchDirection.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
 
-                String[] languages = getResources().getStringArray(R.array.reserachInterest);
-
+                String str1 = parent.getItemAtPosition(pos).toString();
+                Direction = str1;
+                //spinner控件 研究方向对应专业
+                Spinner spinner_major = (Spinner) findViewById(R.id.discipline_spinner);
+                //定义数据源变量
+                String[] researchMajor = new String[3];
+                //查询表中的数据并建立数据源
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+                Cursor cursor_major = db.query("Research", null, "direction = ?", new String[]{Direction}, null, null, null);
+                if (cursor_major.moveToFirst()) {
+                    do {
+                        researchMajor[0] = cursor_major.getString(cursor_major.getColumnIndex("major1"));
+                        researchMajor[1] = cursor_major.getString(cursor_major.getColumnIndex("major2"));
+                        researchMajor[2] = cursor_major.getString(cursor_major.getColumnIndex("major3"));
+                    } while (cursor_major.moveToNext());
+                }
+                // 建立Adapter并且绑定数据源
+                ArrayAdapter<String> adapter_two = new ArrayAdapter<String>(DisciplineActivity.this, android.R.layout.simple_spinner_item, researchMajor);
+                adapter_two.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                //绑定 Adapter到控件
+                spinner_major.setAdapter(adapter_two);
             }
 
             @Override
@@ -70,21 +91,25 @@ public class DisciplineActivity extends AppCompatActivity {
                 // Another interface callback
             }
         });
-        Spinner spinner_two = (Spinner) findViewById(R.id.discipline_spinner);
-        // 建立数据源
-        String[] mItems_two = getResources().getStringArray(R.array.disciplineInterestTwo);
-        // 建立Adapter并且绑定数据源
-        ArrayAdapter<String> adapter_two = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, mItems_two);
-        adapter_two.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //绑定 Adapter到控件
-        spinner_two.setAdapter(adapter_two);
-        spinner_two.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        Spinner spinner_major = (Spinner) findViewById(R.id.discipline_spinner);
+        spinner_major.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
-
-                String[] languages = getResources().getStringArray(R.array.disciplineInterestTwo);
-
+                String str2 = parent.getItemAtPosition(pos).toString();
+                Major = str2;
+                String[] trait1 = new String[1];
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+                Cursor cursor_major = db.query("Major", null, "major = ?", new String[]{Major}, null, null, null);
+                if (cursor_major.moveToFirst()) {
+                    do {
+                        trait1[0] = cursor_major.getString(cursor_major.getColumnIndex("trait"));
+                    } while (cursor_major.moveToNext());
+                }
+                String message;
+                message = trait1[0];
+                TextView textView_details = (TextView) findViewById(R.id.text_details);
+                textView_details.setText(message);
             }
 
             @Override
@@ -93,10 +118,10 @@ public class DisciplineActivity extends AppCompatActivity {
             }
         });
 
-        String message;
-        message = "        选择专业时，应从自己的未来打算开始，是准备就业，还是准备从事研究工作。然后根据不同的方向，结合自己的兴趣选择。";
-        TextView textView_details = (TextView) findViewById(R.id.text_details);
-        textView_details.setText(message);
+//        String message;
+//        message = "        选择专业时，应从自己的未来打算开始，是准备就业，还是准备从事研究工作。然后根据不同的方向，结合自己的兴趣选择。";
+//        TextView textView_details = (TextView) findViewById(R.id.text_details);
+//        textView_details.setText(message);
     }
 
     public void chooseEmploy(View view) {
