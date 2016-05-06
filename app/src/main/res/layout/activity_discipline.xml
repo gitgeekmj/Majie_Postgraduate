@@ -103,8 +103,7 @@
 
         <Button
             android:id="@+id/findSchool_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/usuallyUse"
             android:onClick="majorSchool"
             android:text="@string/button_findSchool"
             android:layout_gravity="center_horizontal"/>

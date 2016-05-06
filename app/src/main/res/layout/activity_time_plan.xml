@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/parentUse"
+    tools:context=".MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="cn.studyjams.s1.sj19.majie.TimePlan">
+
+        <TextView
+            android:id="@+id/title_textview"
+            style="@style/titleUse"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="@string/textView_timeTitle" />
+
+        <TextView
+            android:id="@+id/explain_textview"
+            style="@style/usuallyUse"
+            android:layout_below="@id/title_textview"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/textView_timePlan"
+            android:textSize="18sp" />
+
+        <TextView
+            style="@style/usuallyUse"
+            android:layout_marginTop="16dp"
+            android:text="@string/textView_habitChoose"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radiobutton_habitOne"
+                style="@style/radioButtonUse"
+                android:onClick="chooseHabitOne"
+                android:text="@string/textView_habitOne" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_habitTwo"
+                style="@style/radioButtonUse"
+                android:onClick="chooseHabitTwo"
+                android:text="@string/textView_habitTwo" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_habitThree"
+                style="@style/radioButtonUse"
+                android:onClick="chooseHabitThree"
+                android:text="@string/textView_habitThree" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/usuallyUse"
+            android:layout_marginTop="16dp"
+            android:text="@string/textView_sport"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radiobutton_sportOne"
+                style="@style/radioButtonUse"
+                android:onClick="chooseHabitOne"
+                android:text="@string/textView_sportOne" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_sportTwo"
+                style="@style/radioButtonUse"
+                android:onClick="chooseHabitTwo"
+                android:text="@string/textView_sportTwo" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_sportThree"
+                style="@style/radioButtonUse"
+                android:onClick="chooseHabitThree"
+                android:text="@string/textView_sportThree" />
+        </RadioGroup>
+        <Button
+            android:id="@+id/findSchool_button"
+            style="@style/usuallyUse"
+            android:onClick="majorSchool"
+            android:layout_marginTop="16dp"
+            android:text="@string/button_createSport"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</ScrollView>

@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">计算机专业考研帮</string>
     <string name="textView_title">计算机专业考研帮</string>
+    <string name="textView_timeTitle">时间规划</string>
     <string name="textView_explain">\t\t\t这款APP专为想要报考计算机专业的同学制作，帮助大家从以下四个方面进行备考，希望对正在使用的您有帮助。</string>
+    <string name="textView_timePlan">\t\t\t进行时间安排时，要结合自身习惯，不要盲目跟从身边或网上的经验帖。对自己每一个阶段都要有清晰的安排，让备考不成为负担。</string>
     <string name="button_choose_disipline">专业挑选</string>
     <string name="button_timePlanning">时间规划</string>
     <string name="button_book_recommend">书籍推荐</string>
@@ -23,6 +25,14 @@
     <string name="textview_findSchool_schoolRank">所选专业对应学校排行</string>
     <string name="textview_findSchool_grade">往年录取平均分数</string>
     <string name="textview_findSchool_publicPraise">专业口碑:</string>
-
+    <string name="textView_habitChoose">个人习惯选择</string>
+    <string name="textView_habitOne">效率型</string>
+    <string name="textView_habitTwo">懒散型</string>
+    <string name="textView_habitThree">学霸型</string>
+    <string name="textView_sport">平时运动情况</string>
+    <string name="textView_sportOne">每天动</string>
+    <string name="textView_sportTwo">每周动</string>
+    <string name="textView_sportThree">基本不动</string>
+    <string name="button_createSport">生成复习规划</string>
 
 </resources>
