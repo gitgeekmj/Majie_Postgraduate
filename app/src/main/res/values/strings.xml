@@ -13,6 +13,7 @@
     <string name="RadioButton_research">科研</string>
     <string name="RadioButton_employment">就业</string>
     <string name="text_researchInterests">研究方向</string>
+    <string name="text_workInterests">就业方向</string>
     <string name="text_employInterests">选择方向</string>
     <string name="text_choose_displine">专业选择</string>
     <string name="text_displineCharacters">专业特点</string>
