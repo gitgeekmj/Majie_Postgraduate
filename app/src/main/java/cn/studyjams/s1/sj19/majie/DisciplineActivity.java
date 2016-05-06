@@ -121,6 +121,7 @@ public class DisciplineActivity extends AppCompatActivity {
 
     /**
      * 下方为就业spinner控件与数据库交互
+     *
      * @param view
      */
     public void chooseEmploy(View view) {
@@ -214,6 +215,13 @@ public class DisciplineActivity extends AppCompatActivity {
     public void notThinkClearly(View view) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("https://www.zhihu.com/question/29023850"));
+        startActivity(intent);
+    }
+
+    public void majorSchool(View view) {
+        Intent intent = new Intent(DisciplineActivity.this, DefineTarget.class);
+        intent.putExtra("major", Major);
+        intent.putExtra("already","ready");
         startActivity(intent);
     }
 

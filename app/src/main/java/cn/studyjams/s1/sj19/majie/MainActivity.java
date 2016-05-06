@@ -147,6 +147,60 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         values.put("major2", "8");
         values.put("major3", "9");
         db.insert("Work", null, values);
+        values.clear();
+        values.put("major", "1");
+        values.put("school1", "qinghua");
+        values.put("school2", "beida");
+        values.put("school3", "fudan");
+        db.insert("School", null, values);
+        values.clear();
+        values.put("major", "2");
+        values.put("school1", "qinghua");
+        values.put("school2", "hafe");
+        values.put("school3", "fudan");
+        db.insert("School", null, values);
+        values.clear();
+        values.put("major", "3");
+        values.put("school1", "qinghua");
+        values.put("school2", "xijiao");
+        values.put("school3", "fudan");
+        db.insert("School", null, values);
+        values.clear();
+        values.put("major", "4");
+        values.put("school1", "qinghua");
+        values.put("school2", "beihang");
+        values.put("school3", "fudan");
+        db.insert("School", null, values);
+        values.clear();
+        values.put("major", "5");
+        values.put("school1", "qinghua");
+        values.put("school2", "dongda");
+        values.put("school3", "fudan");
+        db.insert("School", null, values);
+        values.clear();
+        values.put("major", "6");
+        values.put("school1", "qinghua");
+        values.put("school2", "dongqin");
+        values.put("school3", "fudan");
+        db.insert("School", null, values);
+        values.clear();
+        values.put("major", "7");
+        values.put("school1", "qinghua");
+        values.put("school2", "renda");
+        values.put("school3", "fudan");
+        db.insert("School", null, values);
+        values.clear();
+        values.put("major", "8");
+        values.put("school1", "qinghua");
+        values.put("school2", "shangjiao");
+        values.put("school3", "fudan");
+        db.insert("School", null, values);
+        values.clear();
+        values.put("major", "9");
+        values.put("school1", "qinghua");
+        values.put("school2", "hehe");
+        values.put("school3", "fudan");
+        db.insert("School", null, values);
     }
 
     /**
@@ -172,6 +226,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.chooseTarget_button:
                 Intent intent_chooseTarget = new Intent(MainActivity.this, DefineTarget.class);
+                intent_chooseTarget.putExtra("already","noready");
                 startActivity(intent_chooseTarget);
                 break;
             case R.id.lifeTips_buton:
