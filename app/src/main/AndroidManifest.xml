@@ -27,7 +27,13 @@
             android:exported="true" />
 
         <activity android:name=".EncouageMusic" />
-        <activity android:name=".TimePlan"></activity>
+        <activity android:name=".TimePlan" />
+        <activity android:name=".ReviewPlan" />
+        <activity android:name=".LifeTips" />
+        <activity
+            android:name=".BookCommend"
+            android:label="@string/title_activity_book_commend"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

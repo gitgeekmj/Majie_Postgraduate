@@ -214,14 +214,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent_chooseDiscipline);
                 break;
             case R.id.timePlanning_button:
-                String message_timePlanning;
-                message_timePlanning = "        进行时间安排时，要结合自身习惯，不要盲目跟从身边或网上的经验帖。对自己每一个阶段都要有清晰的安排，让备考不成为负担。";
-                TextView textView_timePlanning = (TextView) findViewById(R.id.explain_textview);
-                textView_timePlanning.setText(message_timePlanning);
+//                String message_timePlanning;
+//                message_timePlanning = "        进行时间安排时，要结合自身习惯，不要盲目跟从身边或网上的经验帖。对自己每一个阶段都要有清晰的安排，让备考不成为负担。";
+//                TextView textView_timePlanning = (TextView) findViewById(R.id.explain_textview);
+//                textView_timePlanning.setText(message_timePlanning);
+                Intent intent_timePlanning = new Intent(MainActivity.this, TimePlan.class);
+                startActivity(intent_timePlanning);
                 break;
             case R.id.bookRecommend_button:
-                Intent intent_bookRecommend = new Intent(Intent.ACTION_VIEW);
-                intent_bookRecommend.setData(Uri.parse("http://bbs.kaoyan.com/t6141020p1"));
+//                Intent intent_bookRecommend = new Intent(Intent.ACTION_VIEW);
+//                intent_bookRecommend.setData(Uri.parse("http://bbs.kaoyan.com/t6141020p1"));
+//                startActivity(intent_bookRecommend);
+                Intent intent_bookRecommend = new Intent(MainActivity.this, BookCommend.class);
                 startActivity(intent_bookRecommend);
                 break;
             case R.id.chooseTarget_button:
