@@ -78,25 +78,24 @@
             <RadioButton
                 android:id="@+id/radiobutton_sportOne"
                 style="@style/radioButtonUse"
-                android:onClick="chooseHabitOne"
+                android:onClick="chooseSportOne"
                 android:text="@string/textView_sportOne" />
 
             <RadioButton
                 android:id="@+id/radiobutton_sportTwo"
                 style="@style/radioButtonUse"
-                android:onClick="chooseHabitTwo"
+                android:onClick="chooseSportTwo"
                 android:text="@string/textView_sportTwo" />
 
             <RadioButton
                 android:id="@+id/radiobutton_sportThree"
                 style="@style/radioButtonUse"
-                android:onClick="chooseHabitThree"
+                android:onClick="chooseSportThree"
                 android:text="@string/textView_sportThree" />
         </RadioGroup>
         <Button
-            android:id="@+id/findSchool_button"
+            android:id="@+id/createReview_button"
             style="@style/usuallyUse"
-            android:onClick="majorSchool"
             android:layout_marginTop="16dp"
             android:text="@string/button_createSport"
             android:layout_gravity="center_horizontal" />
