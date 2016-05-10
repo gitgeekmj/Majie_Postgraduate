@@ -7,7 +7,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 public class ReviewPlan extends AppCompatActivity {
-
+    //定义控件
     public static String Plan;
     TextView list_work01;
     TextView list_work02;
