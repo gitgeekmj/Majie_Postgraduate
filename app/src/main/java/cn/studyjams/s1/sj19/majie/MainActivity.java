@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                Intent intent_bookRecommend = new Intent(Intent.ACTION_VIEW);
 //                intent_bookRecommend.setData(Uri.parse("http://bbs.kaoyan.com/t6141020p1"));
 //                startActivity(intent_bookRecommend);
-                Intent intent_bookRecommend = new Intent(MainActivity.this, BookCommend.class);
+                Intent intent_bookRecommend = new Intent(MainActivity.this, BookComend.class);
                 startActivity(intent_bookRecommend);
                 break;
             case R.id.chooseTarget_button:

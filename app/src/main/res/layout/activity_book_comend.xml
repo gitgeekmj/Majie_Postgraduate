@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="cn.studyjams.s1.sj19.majie.BookCommend">
+    tools:context="cn.studyjams.s1.sj19.majie.BookComend">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"

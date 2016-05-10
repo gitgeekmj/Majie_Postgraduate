@@ -33,6 +33,10 @@
         <activity
             android:name=".BookCommend"
             android:label="@string/title_activity_book_commend"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BookComend"
+            android:label="@string/title_activity_book_comend"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
