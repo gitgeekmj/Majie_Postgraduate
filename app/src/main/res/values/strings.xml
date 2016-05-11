@@ -122,7 +122,7 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="bookCommend_one">考研基础</string>
-    <string name="bookCommend_two">公共基础</string>
+    <string name="bookCommend_two">专业基础</string>
     <string name="bookCommend_three">鸡汤美学</string>
 
     <!-- TODO: Remove or change this placeholder text -->
