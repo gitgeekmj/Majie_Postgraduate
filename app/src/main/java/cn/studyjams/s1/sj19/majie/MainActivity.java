@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -234,10 +233,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent_chooseTarget);
                 break;
             case R.id.lifeTips_buton:
-                String message_lifeTips;
-                message_lifeTips = "        根据自己的身体情况安排好自己的饮食、运动、娱乐。可以进行每周更换制，动态的调整自己的作息，让身体适应考研状态，让生活为考研加分。";
-                TextView textView_lifeTips = (TextView) findViewById(R.id.explain_textview);
-                textView_lifeTips.setText(message_lifeTips);
+//                String message_lifeTips;
+//                message_lifeTips = "        根据自己的身体情况安排好自己的饮食、运动、娱乐。可以进行每周更换制，动态的调整自己的作息，让身体适应考研状态，让生活为考研加分。";
+//                TextView textView_lifeTips = (TextView) findViewById(R.id.explain_textview);
+//                textView_lifeTips.setText(message_lifeTips);
+                Intent intent_lifeTips = new Intent(MainActivity.this,LifeTips.class);
+                startActivity(intent_lifeTips);
                 break;
             case R.id.encouragement_button:
                 Intent intent_encouragement = new Intent(Intent.ACTION_VIEW);

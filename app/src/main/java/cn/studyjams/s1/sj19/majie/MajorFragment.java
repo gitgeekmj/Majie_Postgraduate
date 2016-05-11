@@ -1,11 +1,14 @@
 package cn.studyjams.s1.sj19.majie;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -23,6 +26,63 @@ public class MajorFragment extends Fragment {
         ListView listView = (ListView) view.findViewById(R.id.Major_listview);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, data);
         listView.setAdapter(arrayAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0:
+                        Intent intent_0 = new Intent(Intent.ACTION_VIEW);
+                        intent_0.setData(Uri.parse("https://book.douban.com/subject/1137263/"));
+                        startActivity(intent_0);
+                        break;
+                    case 1:
+                        Intent intent_1 = new Intent(Intent.ACTION_VIEW);
+                        intent_1.setData(Uri.parse("https://book.douban.com/subject/1230098/"));
+                        startActivity(intent_1);
+                        break;
+                    case 2:
+                        Intent intent_2 = new Intent(Intent.ACTION_VIEW);
+                        intent_2.setData(Uri.parse("https://book.douban.com/subject/3360807/"));
+                        startActivity(intent_2);
+                        break;
+                    case 3:
+                        Intent intent_3 = new Intent(Intent.ACTION_VIEW);
+                        intent_3.setData(Uri.parse("https://book.douban.com/subject/1473329/"));
+                        startActivity(intent_3);
+                        break;
+                    case 4:
+                        Intent intent_4 = new Intent(Intent.ACTION_VIEW);
+                        intent_4.setData(Uri.parse("https://book.douban.com/subject/1313042/"));
+                        startActivity(intent_4);
+                        break;
+                    case 5:
+                        Intent intent_5 = new Intent(Intent.ACTION_VIEW);
+                        intent_5.setData(Uri.parse("https://book.douban.com/subject/1139336/"));
+                        startActivity(intent_5);
+                        break;
+                    case 6:
+                        Intent intent_6 = new Intent(Intent.ACTION_VIEW);
+                        intent_6.setData(Uri.parse("https://book.douban.com/subject/3012360/"));
+                        startActivity(intent_6);
+                        break;
+                    case 7:
+                        Intent intent_7 = new Intent(Intent.ACTION_VIEW);
+                        intent_7.setData(Uri.parse("https://book.douban.com/subject/2778632/"));
+                        startActivity(intent_7);
+                        break;
+                    case 8:
+                        Intent intent_8 = new Intent(Intent.ACTION_VIEW);
+                        intent_8.setData(Uri.parse("https://book.douban.com/subject/2377310/"));
+                        startActivity(intent_8);
+                        break;
+                    default:
+                        Intent intent_9 = new Intent(Intent.ACTION_VIEW);
+                        intent_9.setData(Uri.parse("https://book.douban.com/subject/1767741/"));
+                        startActivity(intent_9);
+                        break;
+                }
+            }
+        });
         return view;
     }
 
