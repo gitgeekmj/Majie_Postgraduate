@@ -84,27 +84,27 @@
                 <TextView
                     android:id="@+id/list_work02"
                     style="@style/titleUse"
-                    android:layout_marginTop="20dp"/>
+                    android:layout_marginTop="50dp"/>
                 <TextView
                     android:id="@+id/list_work03"
                     style="@style/titleUse"
-                    android:layout_marginTop="20dp"/>
+                    android:layout_marginTop="50dp"/>
                 <TextView
                     android:id="@+id/list_work04"
                     style="@style/titleUse"
-                    android:layout_marginTop="20dp"/>
+                    android:layout_marginTop="50dp"/>
                 <TextView
                     android:id="@+id/list_work05"
                     style="@style/titleUse"
-                    android:layout_marginTop="20dp"/>
+                    android:layout_marginTop="50dp"/>
                 <TextView
                     android:id="@+id/list_work06"
                     style="@style/titleUse"
-                    android:layout_marginTop="20dp"/>
+                    android:layout_marginTop="50dp"/>
                 <TextView
                     android:id="@+id/list_work07"
                     style="@style/titleUse"
-                    android:layout_marginTop="20dp"/>
+                    android:layout_marginTop="50dp"/>
             </LinearLayout>
 
         </LinearLayout>
