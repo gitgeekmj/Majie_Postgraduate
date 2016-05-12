@@ -38,12 +38,14 @@
 
             <TextView
                 style="@style/titleUse"
+                android:layout_marginTop="16dp"
                 android:text="@string/textview_findSchool_grade"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/mean_textview"
                 style="@style/titleUse"
+                android:layout_marginTop="16dp"
                 android:layout_marginLeft="16dp"
                 android:text="0"
                 android:textSize="24sp" />
@@ -58,6 +60,6 @@
             android:id="@+id/publicPraise_textview"
             style="@style/usuallyUse"
             android:layout_marginTop="16dp"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
     </LinearLayout>
 </ScrollView>
