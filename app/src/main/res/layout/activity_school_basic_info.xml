@@ -19,6 +19,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/school_name_textview"
                 style="@style/titleUse"
                 android:text="学校名(占位)"
                 android:textSize="24sp" />
@@ -41,6 +42,7 @@
                 android:textSize="24sp" />
 
             <TextView
+                android:id="@+id/mean_textview"
                 style="@style/titleUse"
                 android:layout_marginLeft="16dp"
                 android:text="0"
@@ -54,6 +56,8 @@
 
         <TextView
             android:id="@+id/publicPraise_textview"
-            style="@style/usuallyUse" />
+            style="@style/usuallyUse"
+            android:layout_marginTop="16dp"
+            android:textSize="24sp" />
     </LinearLayout>
 </ScrollView>

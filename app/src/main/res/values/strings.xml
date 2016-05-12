@@ -25,7 +25,7 @@
     <string name="textview_findSchool_chooseTarget">去选专业</string>
     <string name="textview_findSchool_schoolRank">所选专业对应学校排行</string>
     <string name="textview_findSchool_grade">往年录取平均分数</string>
-    <string name="textview_findSchool_publicPraise">专业口碑:</string>
+    <string name="textview_findSchool_publicPraise">在校生评价:</string>
     <string name="textView_habitChoose">个人习惯选择</string>
     <string name="textView_habitOne">效率型</string>
     <string name="textView_habitTwo">懒散型</string>

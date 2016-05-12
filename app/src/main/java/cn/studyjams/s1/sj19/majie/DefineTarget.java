@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -69,6 +70,16 @@ public class DefineTarget extends AppCompatActivity {
                     default:
                         break;
                 }
+            }
+        });
+        ListView listView = (ListView) findViewById(R.id.school_listview);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String str = parent.getItemAtPosition(position).toString();
+                Intent intent = new Intent(DefineTarget.this,SchoolBasicInfo.class);
+                intent.putExtra("school",str);
+                startActivity(intent);
             }
         });
     }
