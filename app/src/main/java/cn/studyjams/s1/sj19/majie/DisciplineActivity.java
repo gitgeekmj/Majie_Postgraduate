@@ -13,11 +13,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DisciplineActivity extends AppCompatActivity {
     private MyDatabaseHelper dbHelper;
     public static String Direction = "";
     public static String Major = "";
+    public boolean isPress = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class DisciplineActivity extends AppCompatActivity {
      */
     public void chooseResearch(View view) {
         //将“选择方向”更改为研究方向
+        isPress = true;
         TextView textView = (TextView) findViewById(R.id.interests);
         textView.setText(R.string.text_researchInterests);
         //spinner控件 研究方向
@@ -125,6 +128,7 @@ public class DisciplineActivity extends AppCompatActivity {
      * @param view
      */
     public void chooseEmploy(View view) {
+        isPress = true;
         //将“选择方向”更改为就业方向
         TextView textView = (TextView) findViewById(R.id.interests);
         textView.setText(R.string.text_workInterests);
@@ -219,10 +223,12 @@ public class DisciplineActivity extends AppCompatActivity {
     }
 
     public void majorSchool(View view) {
-        Intent intent = new Intent(DisciplineActivity.this, DefineTarget.class);
-        intent.putExtra("major", Major);
-        intent.putExtra("already","ready");
-        startActivity(intent);
+        if (isPress) {
+            Intent intent = new Intent(DisciplineActivity.this, DefineTarget.class);
+            intent.putExtra("major", Major);
+            intent.putExtra("already", "ready");
+            startActivity(intent);
+        }else Toast.makeText(DisciplineActivity.this, "请选择方向", Toast.LENGTH_SHORT).show();
     }
 
     public int queryCount(String databaseName) {
