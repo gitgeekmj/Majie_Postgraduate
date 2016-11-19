@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "28153731687",
+    "firebase_url": "https://computergraduatehelp.firebaseio.com",
+    "project_id": "computergraduatehelp",
+    "storage_bucket": "computergraduatehelp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28153731687:android:3e6c99b9e0d77584",
+        "android_client_info": {
+          "package_name": "cn.studyjams.s1.sj19.majie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "28153731687-fo1su3lqj8hnmbpu41dagbqd4ng40d4b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cn.studyjams.s1.sj19.majie",
+            "certificate_hash": "73A0B6D50133C6BA9074798A72BB6BA6DABE511A"
+          }
+        },
+        {
+          "client_id": "28153731687-sp8gnn4397c8slj1i04csabil6bbh20b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKF5-4Y9BEkNRrqpfYUkrAj8v7KKOUuMs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "28153731687-sp8gnn4397c8slj1i04csabil6bbh20b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

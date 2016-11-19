@@ -336,11 +336,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.chooseTarget_button:
                 Intent intent_chooseTarget = new Intent(MainActivity.this, DefineTarget.class);
-                intent_chooseTarget.putExtra("already","noready");
+                intent_chooseTarget.putExtra("already", "noready");
                 startActivity(intent_chooseTarget);
                 break;
             case R.id.lifeTips_buton:
-                Intent intent_lifeTips = new Intent(MainActivity.this,LifeTips.class);
+                Intent intent_lifeTips = new Intent(MainActivity.this, LifeTips.class);
                 startActivity(intent_lifeTips);
                 break;
             case R.id.encouragement_button:
